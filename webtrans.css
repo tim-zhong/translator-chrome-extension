@@ -1,0 +1,53 @@
+#webtrans-popup{
+	position:absolute;
+	background: rgba(0,0,0,0.8);
+	color:#ffffff;
+	max-width: 300px;
+	padding:8px 16px;
+	border-radius:3px;
+	transition: width 250ms;
+	box-shadow: 10px 10px 40px rgba(0,0,0,0.2);
+	z-index:999999;
+}
+
+#webtrans-loading{
+	width: 15px;
+}
+
+#webtrans-popup:after{
+	content: '';
+	opacity: 0.8;
+	position: absolute;
+	left: 50%;
+	margin-left: -6px;
+	width: 0;
+	height: 0;
+	border-width: 6px;
+	border-color: black transparent transparent transparent;
+	border-style: solid;
+	bottom:-12px;
+	margin-top: 12px;
+}
+
+.webtrans-show{
+	animation-duration:250ms;
+	animation-name:expand;
+	opacity: 1;	
+}
+
+.webtrans-hide{
+	visibility: hidden;
+}
+.webtrans-hide:after{
+	visibility: hidden;
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

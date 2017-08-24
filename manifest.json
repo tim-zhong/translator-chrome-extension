@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "WebTrans",
+  "description": "This extension helps you translate contents on any English webpage into Chinese",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "web_accessible_resources": [
+    "loading.gif"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["webtrans.css"],
+      "js": ["webtrans.js"]
+    }
+  ]
+}
