@@ -41,7 +41,7 @@ function showPopup(rect) {
 	var popupWidth = popup.offsetWidth;	
 	var popupHeight = popup.offsetHeight;
 	popup.style.left = (rect.right - rect.left) / 2 + rect.left - (popupWidth / 2) + 'px';
-	popup.style.top =  (rect.top - popupHeight) + document.body.scrollTop - 10 + 'px';
+	popup.style.top =  (rect.top - popupHeight) + window.scrollY - 10 + 'px';
 	popup.className = 'webtrans-show';
 
 	popup.selectionRect = rect;
@@ -55,7 +55,7 @@ function updatePopup(text) {
 		var popupWidth = popup.offsetWidth;	
 		var popupHeight = popup.offsetHeight;
 		popup.style.left = (rect.right - rect.left) / 2 + rect.left - (popupWidth / 2) + 'px';
-		popup.style.top =  (rect.top - popupHeight) + document.body.scrollTop - 10 + 'px';
+		popup.style.top =  (rect.top - popupHeight) + window.scrollY - 10 + 'px';
 		popup.text = text;
 	}
 }
